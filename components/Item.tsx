@@ -24,7 +24,7 @@ export const MusicItem = ({ item, selectedItem, onPress }) => {
           </View>
           {selectedItem?.trackId == item.trackId && (
             <FontAwesome
-              name={selectedItem.playing ? 'pause' : 'play'}
+              name={selectedItem.playing ? 'pause' : 'music'}
               size={20}
               color={Colors[colorScheme].text}
             />
