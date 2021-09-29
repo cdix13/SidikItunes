@@ -1,5 +1,5 @@
 import { FontAwesome } from "@expo/vector-icons";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   FlatList,
   Image,
@@ -7,7 +7,8 @@ import {
   TextInput,
   TouchableWithoutFeedback,
 } from "react-native";
-import { Text, View } from "../components/Themed";
+import { Text } from "../components/Text";
+import { View } from "../components/View";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 
@@ -16,28 +17,6 @@ export default function MusicPlayer() {
   const [search, setSearch] = useState("");
   const [selectedItem, setSelectedItem] = useState({});
   const [lists, setLists] = useState([]);
-
-  // useEffect(() => {
-  //   // fetch("https://itunes.apple.com/search?term=taylor+swift&media=music")
-  //   //   .then((response) => response.json())
-  //   //   .then((responseJson) => {
-  //   //     console.log(responseJson.results);
-  //   //     // setFilteredDataSource(responseJson);
-  //   //     // setMasterDataSource(responseJson);
-  //   //   })
-  //   //   .catch((error) => {
-  //   //     console.error(error);
-  //   //   });
-  //   // fetch("https://jsonplaceholder.typicode.com/posts")
-  //   //   .then((response) => response.json())
-  //   //   .then((responseJson) => {
-  //   //     setFilteredDataSource(responseJson);
-  //   //     setMasterDataSource(responseJson);
-  //   //   })
-  //   //   .catch((error) => {
-  //   //     console.error(error);
-  //   //   });
-  // }, []);
 
   const searchFilterFunction = (text) => {
     if (!selectedItem?.playing) {
